@@ -7,6 +7,13 @@ schemes:
 - "http"
 paths:
   /pet:
+    get:
+      operationId: "getPet"
+      responses:
+        200:
+          description: "Successfully get a pet"
+          schema:
+            $ref: "#/definitions/Pet"
     post:
       tags:
       - "pet"
@@ -54,6 +61,7 @@ definitions:
         - "available"
         - "pending"
         - "sold"
+
   ApiResponse:
     type: "object"
     properties:
