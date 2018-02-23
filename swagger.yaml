@@ -14,6 +14,12 @@ paths:
           description: "Successfully get a pet"
           schema:
             $ref: "#/definitions/Pet"
+          examples:
+            application/json:
+              id: 25
+              name: Fred
+              photoUrls: ['http://google.com']
+              status: available
     post:
       tags:
       - "pet"
@@ -61,6 +67,11 @@ definitions:
         - "available"
         - "pending"
         - "sold"
+    example:
+      id: 25
+      name: Fred
+      photoUrls: ['http://google.com']
+      status: available
 
   ApiResponse:
     type: "object"
